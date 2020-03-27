@@ -1,25 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+// import React, { useState } from 'react';
+import Routes from './routes';
+import './global.css';
+//Geralmente um componente no React tem a primeira letra Maiuscula
+//Quando o html está escrito dentro de um arquivo JS, ele é chamado de JSX (Javascript XML(sintaxy do HTML))
 function App() {
+  //useState retorna um Array [valor, funçãoAtualização]
+  // const [counter, setCounter] = useState(0)
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          vdasdsdas
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes />
   );
 }
 
