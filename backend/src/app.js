@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const routes = require('./routes');
+const { errors } = require('celebrate');
 const app = express();
 /**
  * Tipos de parâmetros:
@@ -26,7 +27,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(routes);
+app.use(errors());
 
-app.listen(8081, () => {
-    console.log('Server running...');
-})
+module.exports = app;
